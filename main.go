@@ -35,11 +35,10 @@ func main() {
 	appUrl := fmt.Sprintf("%s:%s", cfg.App.Host, cfg.App.Port)
 
 	e := echo.New()
-	defer e.Close()
-
-	v := "v1"
 
 	// Modules
+	v := "v1"
+
 	// *Books
 	booksRep := repositories.NewBooksRepository()
 	booksUse := usecases.NewBooksUsecase(booksRep)
