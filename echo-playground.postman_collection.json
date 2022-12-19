@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "c3a52032-22dc-49a7-8ad2-2a5170629a12",
+		"name": "echo-playground",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18192292"
+	},
+	"item": [
+		{
+			"name": "find books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/v1/books?title&author=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"books"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": null
+						},
+						{
+							"key": "author",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 - success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/books?title&author=",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null
+								},
+								{
+									"key": "author",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 19 Dec 2022 14:41:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"title\": \"86\",\n        \"author\": \"Asato Asato\"\n    },\n    {\n        \"title\": \"Classroom of the Elite\",\n        \"author\": \"Syougo Kinugasa\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "insert books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"title\": \"86\",\r\n        \"author\": \"Asato Asato\"\r\n    },\r\n    {\r\n        \"title\": \"One Piece\",\r\n        \"author\": \"Eiichiro Oda\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/v1/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 - created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"title\": \"86\",\r\n        \"author\": \"Asato Asato\"\r\n    },\r\n    {\r\n        \"title\": \"One Piece\",\r\n        \"author\": \"Eiichiro Oda\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/v1/books",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"books"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 19 Dec 2022 15:12:29 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "100"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"86\",\n        \"author\": \"Asato Asato\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"One Piece\",\n        \"author\": \"Eiichiro Oda\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
